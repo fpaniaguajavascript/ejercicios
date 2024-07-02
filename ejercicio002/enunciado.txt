@@ -1,0 +1,8 @@
+1. Crear un documento index.html
+    1.1. Tiene un div con el id="Cabecera"
+    1.2. Tiene un div con el id="Cuerpo"
+    1.3. Tiene un div con el id="Pie" 
+2. Crear un documento funciones.js
+3. Desde index.html, modificar la Cabecera
+4. Desde funciones.js modificar el cuerpo sin usar funciones
+5. Desde funciones.js modificar el pie usando funciones

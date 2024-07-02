@@ -1,0 +1,13 @@
+- Crear un página index.html
+    - div con id nombre
+    - div con id altura
+    - div con id peso
+    - div con id IMC
+
+- Pedir al usuario los datos nombre, altura y peso con la función
+  prompt
+- Rellenear los divs correpondientes.
+
+PARA DESPUÉS
+- Crear una función que calcule el IMC
+- Mostrar el IMC en el div correspondiente

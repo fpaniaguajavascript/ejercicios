@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaccion</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    console.time();//INICIO DEL CONTADOR DE TIEMPO
+    alert("Hola");
+    let nombre = prompt("¿Cómo te llamas?","Introduce tu nombre");
+    console.time("proceso");
+    console.info(nombre, 10, true);
+    console.warn(nombre, 10, true);
+    console.error(nombre, 10, true);
+    console.timeEnd("proceso");
+    document.write("Te llamas ",nombre);
+    let respuesta = confirm("¿Quieres dormir la siesta?");
+    console.log(respuesta);
+    console.timeEnd();//FIN DEL CONTADOR DE TIEMPO --> MUESTRA LOS MS DE DURACIÓN DEL CONTADOR
+</script>
