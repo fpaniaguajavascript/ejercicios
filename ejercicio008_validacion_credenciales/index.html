@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="validar()">Validar</button>
+    </div>   
+</body>
+</html>
+<script>
+    function validar()
+    {
+        let email = document.getElementById("email").value;
+        let pwd = document.querySelector("#password").value;
+        console.log(email, pwd);
+        if (email.indexOf("@")<0)
+        {
+            console.error("El email no contiene arroba");
+        }
+    }
+</script>
