@@ -8,8 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="email" placeholder="Email" value="fernando.paniagua@gmail.com">
+        <span class="error" id="error-email"></span>
         <input type="password" id="password" placeholder="Contraseña">
+        <span class="error" id="error-pwd"></span> 
         <button onclick="validar()">Validar</button>
     </div>   
 </body>
@@ -17,12 +19,51 @@
 <script>
     function validar()
     {
+        document.get
         let email = document.getElementById("email").value;
         let pwd = document.querySelector("#password").value;
-        console.log(email, pwd);
+        //Validacion email
         if (email.indexOf("@")<0)
         {
-            console.error("El email no contiene arroba");
+            escribirError("Falta el símbolo @", "#error-email");      
         }
+        else if (email.includes(".")==false)// (!email.includes("."))
+        {
+            escribirError("Falta el símbolo .", "#error-email");  
+        }
+        else if (email.length<6)
+        {
+            escribirError("Longitud insuficiente", "#error-email");
+        }
+        else {
+            escribirError("", "#error-email");
+        }
+        //Validación password
+        if (pwd.toUpperCase().includes('A'))//Method chaining
+        {
+            escribirError("La password no puede contener A", "#error-pwd");
+        }
+        else if (pwd.length < 7)
+        {
+            escribirError("La password tiene que tener más de 6 caracteres","#error-pwd");
+        }
+        else if (/[Ii][Bb][Mm]/.test(pwd))
+        {
+            escribirError("La password no puede contener IBM", "#error-pwd");       
+        }
+        else 
+        {
+            escribirError("", "#error-pwd");
+        }
+        /*
+        else if (pwd.toUpperCase().includes('IBM'))//Method chaining
+        {
+            escribirError("La password no puede contener IBM", "#error-pwd");
+        }
+        */
+    }
+    function escribirError(mensaje, identificador)
+    {
+        document.querySelector(identificador).innerHTML=mensaje;
     }
 </script>
