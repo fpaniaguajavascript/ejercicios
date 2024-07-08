@@ -8,6 +8,6 @@
     4.1. Clase verde --> Atributo background-color:"green"
     4.2. Clase rojo --> Atributo background-color:"red"
 5. Al pulsar el botón comprobar:
-    5.1 Si el valor de alguno de los dos input es <10 ==> 
+    5.1 Si el valor de alguno de los dos input es <10 -> 
         alert con el mensaje "error"
     5.2 Si no, mensaje "ok"
