@@ -33,25 +33,6 @@ dias.forEach((d) => {console.log(d.replaceAll('a','@'))});
 //Recorremos el array con un foreach - función flecha
 dias.forEach(d => console.log(d.replaceAll('e','3')));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let nombres = Array("Pedro","Anna","Arturo","Susana");
 nombres[nombres.length]="Víctor";
 nombres.push("Nía");
@@ -96,6 +77,7 @@ function compararNumeros(n1, n2)
 {
     return Math.abs(n2)-Math.abs(n1);
 }
+
 
 
 
