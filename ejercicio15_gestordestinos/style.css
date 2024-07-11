@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
 #bAgregar
 {
     background-color: green;
@@ -5,12 +9,42 @@
 }
 
 .destino {
+    padding: 20px;
     float:left;
     width: 300px;
-    height: 300px;
-    background-color: beige;
+    height: 400px;
+    background-color: rgb(3, 76, 148);
+    color: white;
     margin: 10px;
+    border-radius: 10px;
 }
 .destino img {
+    margin-top: 30px;
     width: 100%;
+}
+
+.nombre-viaje {
+    font-size: 1.25em;
+    text-decoration: underline;
+}
+
+#formulario {
+    width: 100%;
+    text-align: center;
+}
+
+#div-guardar {
+    padding: 1em 0em 1em 0em;
+    width: 100%;
+    text-align: center;
+}
+
+#div-guardar button {
+    background-color: red;
+    color: white;
+}
+
+input, button {
+    padding: 1em;
+    border-radius: 5px;
 }

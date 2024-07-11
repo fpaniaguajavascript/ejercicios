@@ -1,5 +1,14 @@
 let viajes = new Array();
 
+//Recuperar de localStorage los destinos almacenados
+let viajesAlmacenados = localStorage.getItem("viajes");
+if (viajesAlmacenados!=null)
+{
+    viajes = JSON.parse(viajesAlmacenados);
+    crearListadoViajes(viajes);
+}
+//Fin de recuperar de localStorage
+
 document.querySelector("#bAgregar").addEventListener("click", (event) => {
     let destino = document.querySelector("#iDestino").value;
     let nombre = document.querySelector("#iNombre").value;
@@ -30,3 +39,11 @@ function crearListadoViajes(viajes) {
     document.querySelector("#iNombre").value="";
     document.querySelector("#iFotografia").value="";
 }
+
+//Guardar los destinos en localStorage
+document.querySelector("#bGuardar").addEventListener("click",guardar);
+function guardar() {
+    let strViajes = JSON.stringify(viajes);
+    localStorage.setItem("viajes", strViajes);
+}
+//Fin de Guardar destinos
