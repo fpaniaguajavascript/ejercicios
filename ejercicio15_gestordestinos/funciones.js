@@ -1,4 +1,5 @@
 let viajes = new Array();
+//let viajes = [];//Construcción alternativa
 
 //Recuperar de localStorage los destinos almacenados
 let viajesAlmacenados = localStorage.getItem("viajes");
