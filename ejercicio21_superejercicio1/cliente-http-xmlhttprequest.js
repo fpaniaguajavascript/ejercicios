@@ -35,4 +35,4 @@ function mostrarPaginaError(codigo){
     document.querySelector("#juegos").innerHTML=`<h1>Ha ocurrido un error:${codigo}</h1>`;   
 }
 
-getVideojuegos("http://localhost",5501,"datosx.json");
+getVideojuegos("http://localhost",5501,"datos.json");
