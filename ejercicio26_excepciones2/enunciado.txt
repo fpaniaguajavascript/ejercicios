@@ -6,4 +6,3 @@ Crear una función con el nombre organizarViaje que reciba como argumentos:
 
 La función devolverá el texto: "Se ha reservado un viaje a xxx de yyy días para zzz personas".
 Si no se cumple alguna de las condiciones lanzar una exception (Error).
-
