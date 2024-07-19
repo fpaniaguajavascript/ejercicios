@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="restaurantes">
+        <div class="restaurante">
+            <div class="imagen">
+                <img src="./images/r1.jpg">
+            </div>
+            <div class="descripcion">
+                <div class="nombre">Alfredo's bbq</div>
+                <div class="tipo">Americano</div>
+                <div class="precio">30€</div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</body>
+
+</html>
+<script>
+    function crearFila(imagen, nombre, estilo, precio) {
+        //<div class="restaurante">
+        let divRestaurante = document.createElement("div");
+        divRestaurante.classList.add("restaurante");
+        document.querySelector("#restaurantes").appendChild(divRestaurante);
+        //<div class="imagen">
+        let divImagen = document.createElement("div");
+        divImagen.classList.add("imagen");
+        divRestaurante.appendChild(divImagen);
+        //<img src="./images/r1.jpg">
+        let imgRestaurante = document.createElement("img");
+        imgRestaurante.src = imagen;
+        divImagen.appendChild(imgRestaurante);
+    }
+
+    crearFila("./images/r2.jpg", "Alfredo's bbq", "Americano", "30€");
+</script>
