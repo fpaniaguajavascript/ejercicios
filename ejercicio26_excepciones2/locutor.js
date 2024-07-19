@@ -19,5 +19,5 @@ function speechText(speech, language = 'es') {
     });
 }
 
-//speechText("Mañana vamos al parque");
+speechText("Buenas tardes");
 //speechText("Domani andiamo al parco", "it");
