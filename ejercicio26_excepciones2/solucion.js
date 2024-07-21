@@ -28,7 +28,6 @@ function organizarViaje(pais, pax, dias) {
 try {
     const resultado = organizarViaje("Francia", 2, 7);
     console.log(resultado);
-    speechText(resultado);
 } catch (e) {
     console.error(e.message);
 }
