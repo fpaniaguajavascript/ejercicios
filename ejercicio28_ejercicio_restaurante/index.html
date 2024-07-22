@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="buscador">
         <input type="text" id="iFiltro" placeholder="Filtrar">
     </div>
     <div id="restaurantes">
@@ -58,6 +58,7 @@
 
     function procesarRestaurantes(texto) {
         let objetoServidor = JSON.parse(texto);
+
         arrayRestaurantes = objetoServidor.restaurantes;
         arrayRestaurantes.forEach(restaurante => {
             crearFila(restaurante.imagen,
