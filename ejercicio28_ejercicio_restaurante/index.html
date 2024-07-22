@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div>
+        <input type="text" id="iFiltro" placeholder="Filtrar">
+    </div>
     <div id="restaurantes">
         <!--
         <div class="restaurante">
@@ -22,18 +25,48 @@
             </div>
         </div>
         -->
-        <hr>
     </div>
 </body>
 
 </html>
 <script src="scripts/http-client.js"></script>
+<script src="scripts/generadorfilas.js"></script>
 <script>
-    doGetHTTPRequest("http://127.0.0.1", "5501", "/restaurantes.json", procesarRestaurantes, null)
+    var arrayRestaurantes;
+
+    document.querySelector("#iFiltro").addEventListener("keyup", () => {
+        console.log("p1");
+        let texto = document.querySelector("#iFiltro").value;
+        let restaurantesFiltrados = arrayRestaurantes.filter((restaurante) => {
+            return restaurante.nombre.includes(texto);
+        });
+        document.querySelector("#restaurantes").innerHTML = "";
+        restaurantesFiltrados.forEach(restaurante => {
+            crearFila(restaurante.imagen,
+                restaurante.nombre,
+                restaurante.estilo,
+                restaurante.precio);
+        });
+
+    })
+
+    doGetHTTPRequest(
+        "http://127.0.0.1", "5501", "/restaurantes.json",
+        procesarRestaurantes, procesarError);
+
+
 
     function procesarRestaurantes(texto) {
         let objetoServidor = JSON.parse(texto);
-        let arrayRestaurantes = objetoServidor.restaurantes;
-        console.log(arrayRestaurantes);
+        arrayRestaurantes = objetoServidor.restaurantes;
+        arrayRestaurantes.forEach(restaurante => {
+            crearFila(restaurante.imagen,
+                restaurante.nombre,
+                restaurante.estilo,
+                restaurante.precio);
+        });
+    }
+    function procesarError(err) {
+        console.error(err);
     }
 </script>

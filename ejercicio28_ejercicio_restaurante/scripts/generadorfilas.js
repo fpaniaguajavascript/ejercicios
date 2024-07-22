@@ -30,4 +30,6 @@ function crearFila(imagen, nombre, estilo, precio) {
     divPrecio.classList.add("precio");
     divPrecio.appendChild(document.createTextNode(precio));
     divDescripcion.appendChild(divPrecio);
+    //<hr>
+    document.querySelector("#restaurantes").appendChild(document.createElement("hr"));
 }
