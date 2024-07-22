@@ -10,6 +10,7 @@
 
 <body>
     <div id="restaurantes">
+        <!--
         <div class="restaurante">
             <div class="imagen">
                 <img src="./images/r1.jpg">
@@ -20,26 +21,19 @@
                 <div class="precio">30€</div>
             </div>
         </div>
+        -->
         <hr>
     </div>
 </body>
 
 </html>
+<script src="scripts/http-client.js"></script>
 <script>
-    function crearFila(imagen, nombre, estilo, precio) {
-        //<div class="restaurante">
-        let divRestaurante = document.createElement("div");
-        divRestaurante.classList.add("restaurante");
-        document.querySelector("#restaurantes").appendChild(divRestaurante);
-        //<div class="imagen">
-        let divImagen = document.createElement("div");
-        divImagen.classList.add("imagen");
-        divRestaurante.appendChild(divImagen);
-        //<img src="./images/r1.jpg">
-        let imgRestaurante = document.createElement("img");
-        imgRestaurante.src = imagen;
-        divImagen.appendChild(imgRestaurante);
-    }
+    doGetHTTPRequest("http://127.0.0.1", "5501", "/restaurantes.json", procesarRestaurantes, null)
 
-    crearFila("./images/r2.jpg", "Alfredo's bbq", "Americano", "30€");
+    function procesarRestaurantes(texto) {
+        let objetoServidor = JSON.parse(texto);
+        let arrayRestaurantes = objetoServidor.restaurantes;
+        console.log(arrayRestaurantes);
+    }
 </script>
