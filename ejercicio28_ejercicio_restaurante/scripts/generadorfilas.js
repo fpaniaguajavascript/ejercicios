@@ -9,7 +9,7 @@ function crearFila(imagen, nombre, estilo, precio) {
     divRestaurante.appendChild(divImagen);
     //<img src="./images/r1.jpg">
     let imgRestaurante = document.createElement("img");
-    imgRestaurante.src = imagen;
+    imgRestaurante.src = (imagen == null) ? './images/notfound.jpg' : imagen;
     divImagen.appendChild(imgRestaurante);
     //<div class="descripcion">
     let divDescripcion = document.createElement("div");

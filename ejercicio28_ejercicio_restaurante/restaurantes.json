@@ -1,7 +1,7 @@
 {
     "restaurantes": [
         {
-            "imagen": "images/r1.jpg",
+            "imagen": null,
             "nombre": "Burguer King",
             "estilo": "Tex-mex",
             "precio": 30
@@ -13,7 +13,7 @@
             "precio": 30
         },
         {
-            "imagen": "images/r3.jpg",
+            "imagen": null,
             "nombre": "Basmati",
             "estilo": "Indio",
             "precio": 30
